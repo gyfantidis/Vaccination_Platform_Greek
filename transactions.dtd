@@ -1,0 +1,20 @@
+<!ELEMENT transactions (doctor_lname, doctor_fname, doctor_passport, doctor_email,
+center_name, center_address, center_tk, center_phone, appointment*)>
+
+<!ELEMENT doctor_lname (#PCDATA)>
+<!ELEMENT doctor_fname (#PCDATA)>
+<!ELEMENT doctor_passport (#PCDATA)>
+<!ELEMENT doctor_email (#PCDATA)>
+<!ELEMENT center_name (#PCDATA)>
+<!ELEMENT center_address (#PCDATA)>
+<!ELEMENT center_tk (#PCDATA)>
+<!ELEMENT center_phone (#PCDATA)>
+
+<!ELEMENT appointment (date, time, last_name, first_name, amka, age, status)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT amka (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT status (#PCDATA)>

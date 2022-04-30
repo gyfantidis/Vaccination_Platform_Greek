@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<title>Είσοδος και Εγγραφή του χρήστη στην Πλατφόρμα Εμβολιασμού</title>
+
+<!-- Πληροφορίες Μεταδεδομένων (Metadata)  -->
+<meta charset="UTF-8">
+<meta name="description" content="Είσοδος και Εγγραφή του χρήστη στην Πλατφόρμα Εμβολιασμού">
+<meta name="keywords" content="covid 19, Εμβολιαστικό Κέντρο, Αθήνα, Θεσσαλονίκη, εμβόλιο">
+<meta name="author" content="Ioannis Yfantidis / ggyfantidis@gmail.com">
+
+
+<!-- Εισαγωγή CSS Links -->
+<!-- Βιβλιοθήκη w3css -->
+<link rel="stylesheet" href="css/w3.css">
+<!-- Εικαστικό θέμα -->
+<link rel="stylesheet" href="css/w3-theme-grey.css">
+<!-- Ενσωμάτωση των fontawesome icons theme -->
+<link rel="stylesheet" href="css/all.min.css">
+<!-- Εικαστικές παραμετροποποιήσεις  -->
+<link rel="stylesheet" href="css/custom.css">
+
+<!-- Ενεργοποίηση αρχείων js για έλεγχο υποχρεωτικών πεδίων φορμών login και register -->
+
+<head>
+  <script src="formsCheck/loginCheck.js"> </script>
+  <script src="formsCheck/registerCheck.js"> </script>
+</head>
+
+<body>
+  <!-- Εισαγωγή επικεφαλίδας χωρισμένη σε 3 μέρη των 1/4,2/4 και 1/4  -->
+
+  <header class="w3-container w3-theme-l1">
+    <div class="w3-theme-l1 w3-row w3-padding-24 w3-center">
+      <div class="w3-quarter w3-container">
+        <a href="index.html">
+          <img id="logo" src="img/logo.png" style="width: 200px" alt="logo" /></a>
+      </div>
+      <div class="w3-half w3-container">
+        <p>
+          <strong>Πλατφόρμα εμβολιασμού</strong>
+          <br>Υπουργείο Υγείας
+
+        </p>
+      </div>
+      <div class="w3-center w3-buttom w3-indigo w3-quarter w3-container">
+        <h6><a title="Είσοδος" href="login.html">Είσοδος / Εγγραφή</a></h6>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main class="w3-row">
+
+    <!-- Menu -->
+    <!-- Δημιουργία του menu πλοήγησης αριστερά και στο 20% της οθόνης -->
+    <aside class="w3-center w3-col  w3-theme-l1 w3-bar-block" style="width:20%">
+      <a href="index.html" class="w3-bar-item w3-border w3-border-black w3-button w3-padding-16 w3-mobile">Αρχική σελίδα</a>
+      <a href="centers.html" class="w3-bar-item w3-button w3-border w3-border-black w3-padding-16 w3-mobile">Εμβολιαστικά Κέντρα</a>
+      <a href="instructions.html" class="w3-bar-item w3-button w3-border w3-border-black w3-padding-16 w3-mobile">Οδηγίες εμβολιασμού</a>
+      <a href="login_instr.html" class="w3-bar-item w3-button w3-border w3-border-black w3-padding-16 w3-mobile">Οδηγίες εγγραφής/εισόδου</a>
+      <a href="announcements.html" class="w3-bar-item w3-button w3-border w3-border-black w3-padding-16 w3-mobile">Ανακοινώσεις</a>
+    </aside>
+    <!-- End Menu -->
+
+    <!-- main  -->
+    <main class="w3-row w3-rest" style="line-height:1">
+
+      <!-- login -->
+      <div class="w3-half w3-container w3-border w3-border-black">
+        <h1 class="w3-center"><strong>Είσοδος χρήστη</strong></h1>
+        <h5>
+          Παρακαλώ εισάγετε τον <strong>ΑΜΚΑ</strong> και τον <strong>ΑΦΜ</strong> που δηλώσατε κατά την εγγραφή σας και πατήστε το κουμπί "Είσοδος"
+        </h5>
+        <br />
+
+        <!-- login form -->
+        <form name="loginForm" action="dbManagement/loginDB.php" method="post" onsubmit="return check();">
+          <!-- onsubmit check πεδίων φόρμας-->
+          <div class="w3-center">
+
+            <!-- login table-->
+            <table class="w3-center ">
+              <tr>
+                <td><label for="amka"><i></i>A.M.K.A.</label></td>
+                <td>
+                  <input class="w3-input" id="amka" type="number" name="amka" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="afm"><i></i>Α.Φ.Μ.</label></td>
+                <td>
+                  <input class="w3-input" id="afm" type="number" name="afm" />
+                </td>
+              </tr>
+              <h1></h1>
+            </table>
+            <!-- login button-->
+            <input type="submit" name="login" value="Είσοδος" class="  w3-center  w3-padding w3-margin w3-indigo ">
+          </div>
+        </form>
+      </div>
+
+
+      <!-- register -->
+      <div class="w3-half w3-border w3-border-black w3-container">
+        <h1 class="w3-center"><strong>Εγγραφή χρήστη</strong></h1>
+        <h5>
+          Παρακαλώ εισάγετε όλα τα υποχρεωτικά πεδία (<span>*</span>) και πατήστε το κουμπή "Εγγραφής"
+        </h5>
+        <br />
+
+        <!-- register form onsubmit check register πεδίων φόρμας-->
+        <form name="registerForm" action="dbManagement/insertRegisterData.php" method="POST" onsubmit="return check2();">
+          <div class="w3-center">
+            <!--register table -->
+            <table class="w3-center">
+              <tr>
+                <td><label for="firstname"><i></i>Όνομα<span>*</span> </label></td>
+                <td>
+                  <input class="w3-input" id="firstname" type="text" name="firstname" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="lastname"><i></i>Επώνυμο<span>*</span></label></td>
+                <td>
+                  <input class="w3-input" id="lastname" type="text" name="lastname" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="amka"><i></i>A.M.K.A.<span>*</span></label></td>
+                <td>
+                  <input class="w3-input" id="amka2" type="number" name="amka2" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="afm"><i></i>Α.Φ.Μ.<span>*</span></label></td>
+                <td>
+                  <input class="w3-input" id="afm2" type="number" name="afm2" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="passport"><i></i>Αρ. Ταυτότητας<span>*</span></label></td>
+                <td>
+                  <input class="w3-input" id="passport" type="text" name="passport" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="age"><i></i>Ηλικία<span>*</span></label></td>
+                <td>
+                  <input class="w3-input" id="age" type="number" name="age" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="sex"><i></i>Φύλο</label></td>
+                <td>
+                  <select name="sex">
+                    <option selected disabled>Διάλεξε το φύλο</option>
+                    <option value="M">Άνδρας</option>
+                    <option value="F">Γυναίκα</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="email"><i></i>e-mail</label></td>
+                <td>
+                  <input class="w3-input" id="email" type="text" name="email" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="phone"><i></i>Τηλέφωνο<span>*</span></label></td>
+                <td>
+                  <input class="w3-input" id="phone" type="text" name="phone" />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="role"><i></i>Ρόλος<span>*</span></label></td>
+                <td>
+                  <select name="role" id="role">
+                    <option selected disabled value="">Διάλεξε τον ρόλο</option>
+                    <option value="C">Πολίτης</option>
+                    <option value="D">Γιατρός</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <h1></h1>
+            <!-- register button-->
+            <input type="submit" name="register" value="Εγγραφή" class=" w3-center w3-padding w3-margin  w3-indigo ">
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- Endmain login -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="w3-container  w3-teal w3-padding-large w3-row w3-theme-l1">
+    <div class="w3-center">
+      <a title="Όροι Χρήσης" href="files/terms.pdf" target="_blank">Όροι Χρήσης</a> |
+      <a title="Πολιτική απορρήτου" href="files/privacy.pdf" target="_blank">Πολιτική απορρήτου</a>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</body>
+
+
+</html>

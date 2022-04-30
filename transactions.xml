@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE transactions SYSTEM "transactions.dtd">
+<transactions>
+  <doctor_lname>ΠΑΥΛΙΔΗΣ</doctor_lname>
+  <doctor_fname>ΠΑΥΛΟΣ</doctor_fname>
+  <doctor_passport>ΑΒ121212</doctor_passport>
+  <doctor_email>petros@gmail.com</doctor_email>
+  <center_name>ΜΕΓΑ ΕΜΒΟΛΙΑΣΤΙΚΟ ΚΕΝΤΡΟ ΠΡΟΜΗΘΕΑΣ</center_name>
+  <center_address>Λεωφόρος Κηφισίας 39</center_address>
+  <center_tk>14561</center_tk>
+  <center_phone>210-566-6125</center_phone>
+  <appointment>
+    <date>2022-04-01</date>
+    <time>09:00:00</time>
+    <last_name>ΚΥΡΙΑΚΟΥ</last_name>
+    <first_name>ΚΥΡΙΑΚΟΣ</first_name>
+    <amka>10000000017</amka>
+    <age>42</age>
+    <status>0</status>
+  </appointment>
+  <appointment>
+    <date>2022-04-01</date>
+    <time>10:00:00</time>
+    <last_name>ΑΝΑΣΤΑΣΙΑΔΟΥ</last_name>
+    <first_name>ΑΝΑΣΤΑΣΙΑ</first_name>
+    <amka>44444444444</amka>
+    <age>51</age>
+    <status>1</status>
+  </appointment>
+  <appointment>
+    <date>2022-04-02</date>
+    <time>08:00:00</time>
+    <last_name>ΓΕΩΡΓΙΑΔΗΣ</last_name>
+    <first_name>ΓΕΩΡΓΙΟΣ</first_name>
+    <amka>55555555555</amka>
+    <age>50</age>
+    <status>0</status>
+  </appointment>
+  <appointment>
+    <date>2022-04-02</date>
+    <time>10:00:00</time>
+    <last_name>ΓΙΑΝΝΟΥΛΗΣ</last_name>
+    <first_name>ΓΙΑΝΝΗΣ</first_name>
+    <amka>22048855468</amka>
+    <age>55</age>
+    <status>0</status>
+  </appointment>
+</transactions>

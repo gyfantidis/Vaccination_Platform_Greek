@@ -1,0 +1,102 @@
+/* Load Custom Font
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+*/
+#button{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+span{
+  color:red;
+}
+
+header,
+footer,
+aside,
+#center
+{
+  border: 1px solid;
+}
+
+table{
+  border-collapse: collapse;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+td, th {
+  border: 1px solid ;
+  text-align: center;
+  padding: 8px;
+}
+
+/*
+aside {
+  float: left;
+  text-align : center;
+}
+
+
+content{
+  margin:15%;
+}
+
+
+
+
+
+
+#logo{
+
+}
+
+
+
+
+
+body{
+    background-color: ghostwhite;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+content {
+    display: block;
+    flex: 1 0 auto;
+    min-height: 400px;
+}
+#courses th, #courses td {
+  border: 1px solid black;
+  font-weight: 600;
+  font-size: large;
+}
+.align_middle{
+    vertical-align: middle !important;
+}
+
+#teachers {
+    border:none !important;
+}
+#teachers  td{
+     vertical-align: middle !important;
+}
+
+a{
+  text-decoration:none;
+  }
+*/
